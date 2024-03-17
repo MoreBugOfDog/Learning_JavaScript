@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+.lightly
+.c_bin
+.classes
+node_modules
+dist-ssr
+*.local
