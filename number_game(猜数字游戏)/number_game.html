@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
 
-    <title>Number guessing game</title>
+    <title>猜数字游戏</title>
 
     <style>
       html {
@@ -32,12 +32,12 @@
   <body>
     <h1>猜数字游戏</h1>
 
-    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+    <p>我们选择了 1 到 100 之间的随机数。看看你能不能在 10 回合或更短的时间内猜到它。我们会告诉您，您的猜测是太高还是太低。</p>
 
     <div class="form">
-      <label for="guessField">Enter a guess: </label>
+      <label for="guessField">输入你的猜测： </label>
       <input type="number" min="1" max="100" required id="guessField" class="guessField">
-      <input type="submit" value="Submit guess" class="guessSubmit">
+      <input type="submit" value="提交猜测" class="guessSubmit">
     </div>
 
     <div class="resultParas">
@@ -59,27 +59,27 @@
       function checkGuess() {
         const userGuess = Number(guessField.value);
         if (guessCount === 1) {
-          guesses.textContent = 'Previous guesses: ';
+          guesses.textContent = '之前的猜测： ';
         }
 
         guesses.textContent += userGuess + ' ';
 
         if (userGuess === randomNumber) {
-          lastResult.textContent = 'Congratulations! You got it right!';
+          lastResult.textContent = '恭喜你，答对了！';
           lastResult.style.backgroundColor = 'green';
           lowOrHi.textContent = '';
           setGameOver();
         } else if (guessCount === 10) {
-          lastResult.textContent = '!!!GAME OVER!!!';
+          lastResult.textContent = '⚠️游戏失败⚠️';
           lowOrHi.textContent = '';
           setGameOver();
         } else {
-          lastResult.textContent = 'Wrong!';
+          lastResult.textContent = '错误！';
           lastResult.style.backgroundColor = 'red';
           if(userGuess < randomNumber) {
-            lowOrHi.textContent = 'Last guess was too low!' ;
+            lowOrHi.textContent = '这次你猜的太低了！' ;
           } else if(userGuess > randomNumber) {
-            lowOrHi.textContent = 'Last guess was too high!';
+            lowOrHi.textContent = '这次你猜的太高了！';
           }
         }
 
@@ -94,7 +94,7 @@
         guessField.disabled = true;
         guessSubmit.disabled = true;
         resetButton = document.createElement('button');
-        resetButton.textContent = 'Start new game';
+        resetButton.textContent = '开始新的游戏';
         document.body.appendChild(resetButton);
         resetButton.addEventListener('click', resetGame);
       }
