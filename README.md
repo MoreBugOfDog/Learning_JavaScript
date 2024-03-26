@@ -2,7 +2,6 @@
   <html>
   <head>
       <meta charset="UTF-8">
-      <title>多bug的啸天犬的js学习成果-导航</title>
   </head>
   <body>
   
