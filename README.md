@@ -17,7 +17,7 @@
   </a>
 
   <h1>消息弹窗 plus</h1>
-  <a href = "msg-box_plus(消息弹窗plus)/index.html">
+  <a href = "./msg-box_plus(消息弹窗plus)/index.html">
   <p>点我前往</p>
   </a>
   </body>
