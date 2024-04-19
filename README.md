@@ -22,6 +22,12 @@
   </a>
 
 # 图片库
+  
   <a href = "image_archive/gallery-start/index.html">
+  <p>点我前往</p>
+  </a>
+
+# [wasd移动吃球]弹跳彩球
+  <a href = "Objects/bouncing-balls/index.html">
   <p>点我前往</p>
   </a>
